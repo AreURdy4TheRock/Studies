@@ -23,6 +23,7 @@
             int a = (int)Semaphore.green;
 
             Console.WriteLine(a);
+
         }
         enum Semaphore : int
         {
