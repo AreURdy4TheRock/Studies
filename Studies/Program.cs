@@ -19,6 +19,16 @@
             else Console.WriteLine("У меня нет питомца");
 
             Console.WriteLine("Мой размер ноги {0}", sizeLeg);
+
+            int a = (int)Semaphore.green;
+
+            Console.WriteLine(a);
+        }
+        enum Semaphore : int
+        {
+            red = 100,
+            yellow = 200,
+            green = 300
         }
     }
 }
