@@ -10,6 +10,7 @@
             Console.WriteLine(C);
             AbXy();
             IfElse();
+            Ternar();
         }
         static void  AbXy()
         {
@@ -33,6 +34,13 @@
             {
                 Console.WriteLine("Условие ложно");
             }
+        }
+        static void Ternar()
+        {
+            var a = 6;
+            var b = 7;
+            var c = a != b ? a+b : 0;
+            Console.WriteLine(c);
         }
     }
 }
