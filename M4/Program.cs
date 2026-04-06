@@ -10,7 +10,8 @@
             Console.WriteLine(C);
             AbXy();
             IfElse();
-            Ternar();
+
+            Console.WriteLine(Ternar(6, 7));
         }
         static void  AbXy()
         {
@@ -35,12 +36,10 @@
                 Console.WriteLine("Условие ложно");
             }
         }
-        static void Ternar()
+        static int Ternar(int a, int b)
         {
-            var a = 6;
-            var b = 7;
             var c = a != b ? a+b : 0;
-            Console.WriteLine(c);
+            return c;
         }
     }
 }
