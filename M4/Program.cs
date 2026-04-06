@@ -9,6 +9,7 @@
             bool C = A != B;
             Console.WriteLine(C);
             AbXy();
+            IfElse();
         }
         static void  AbXy()
         {
@@ -18,6 +19,20 @@
             double Y = 2.0;
             bool c = (A < B) | (X > Y);
             Console.WriteLine(c);
+        }
+        static void IfElse()
+        {
+            var a = 1;
+            var b = 2;
+
+            if (a != b)
+            {
+                Console.WriteLine("Условие верно");
+            }
+            else
+            {
+                Console.WriteLine("Условие ложно");
+            }
         }
     }
 }
