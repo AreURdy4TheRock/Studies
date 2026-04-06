@@ -12,6 +12,7 @@
             IfElse();
 
             Console.WriteLine(Ternar(6, 7));
+            SwitchColor();
         }
         static void  AbXy()
         {
@@ -40,6 +41,27 @@
         {
             var c = a != b ? a+b : 0;
             return c;
+        }
+
+        static void SwitchColor()
+        {
+            Console.WriteLine("Введите свой любимий цвет на английском языке");
+            string testString = Console.ReadLine();
+            if (testString == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.WriteLine("Your color is red");
+            }
+            else if (testString == "green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.WriteLine("Your color is green");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.WriteLine("Your color is cyan");
+            }
         }
     }
 }
