@@ -13,6 +13,8 @@
 
             Console.WriteLine(Ternar(6, 7));
             SwitchColor();
+
+            NumberSum();
         }
         static void  AbXy()
         {
@@ -74,6 +76,25 @@
                         break;
                 }
             }
+        }
+        static void NumberSum()
+        {
+            Console.WriteLine("Введите число");
+            int sum = 0;
+            while (true)
+            {
+                var number = Convert.ToInt32(Console.ReadLine());
+                if (number < 0)
+                {
+                    continue;
+                }
+                else if (number == 0)
+                {
+                    break;
+                }
+                sum += number;
+            }
+            Console.WriteLine("Итоговая сумма " + sum);
         }
     }
 }
