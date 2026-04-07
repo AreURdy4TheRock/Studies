@@ -13,6 +13,8 @@
 
             Console.WriteLine(Ternar(6, 7));
             SwitchColor();
+
+            NumberSum();
         }
         static void  AbXy()
         {
@@ -46,30 +48,53 @@
         static void SwitchColor()
         {
             Console.WriteLine("Введите свой любимий цвет на английском языке");
-            string testString = Console.ReadLine();
-            switch (testString)
+            for (int i = 1; i < 5; i++)
             {
-                case "red":
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Your color is red!");
-                    break;
-                case "green":
-                    Console.BackgroundColor = ConsoleColor.Green;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Your color is green!");
-                    break;
-                case "cyan":
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Your color is cyan!");
-                    break;
-                default:
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Your color is yellow!");
-                    break;
+                Console.WriteLine("Итерация {0}", i);
+                string testString = Console.ReadLine();
+                switch (testString)
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Your color is red!");
+                        break;
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Your color is green!");
+                        break;
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.WriteLine("Your color is cyan!");
+                        break;
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Your color is yellow!");
+                        break;
+                }
             }
+        }
+        static void NumberSum()
+        {
+            Console.WriteLine("Введите число");
+            int sum = 0;
+            while (true)
+            {
+                var number = Convert.ToInt32(Console.ReadLine());
+                if (number < 0)
+                {
+                    continue;
+                }
+                else if (number == 0)
+                {
+                    break;
+                }
+                sum += number;
+            }
+            Console.WriteLine("Итоговая сумма " + sum);
         }
     }
 }
