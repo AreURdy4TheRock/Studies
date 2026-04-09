@@ -18,7 +18,9 @@ namespace M4
 
             // NumberSum();
             //ReverceName();
-            ArraySort();
+            //ArraySort();
+            //ArraySum();
+            //ZubArray();
         }
         static void  AbXy()
         {
@@ -130,6 +132,37 @@ namespace M4
                 sortArr[i] = sorted;
             }
             foreach (var item in arr)
+            {
+                Console.Write(item + " ");
+            }
+        }
+        static void ArraySum()
+        {
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+
+            int sum = 0;
+            foreach (int item in arr)
+            {
+                sum += item;
+            }
+            Console.WriteLine("Сумма всех элементов массива = " + sum);
+        }
+
+        static void ZubArray()
+        {
+            int[][] array = new int[3][];
+            array[0] = new int[2] { 1, 2 };
+            array[1] = new int[3] { 1, 2, 3 };
+            array[2] = new int[5] { 1, 2, 3, 4, 5 };
+            foreach(int item in array[0])
+            {
+                Console.Write(item + " ");
+            }
+            foreach (int item in array[1])
+            {
+                Console.Write(item + " ");
+            }
+            foreach (int item in array[2])
             {
                 Console.Write(item + " ");
             }
