@@ -1,4 +1,6 @@
-﻿namespace M4
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace M4
 {
     internal class Program
     {
@@ -15,7 +17,8 @@
             //SwitchColor();
 
             // NumberSum();
-            ReverceName();
+            //ReverceName();
+            ArraySort();
         }
         static void  AbXy()
         {
@@ -105,6 +108,30 @@
             for (int i = name.Length - 1; i >= 0; i--)
             {
                 Console.Write(name[i]);
+            }
+        }
+
+        static void ArraySort()
+        {
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            var sortArr = new int[arr.Length];
+            int sorted = 0;
+            for (int i = 0; i < arr.Length-1; i++)
+            {
+                for (int j = i+1;  j < arr.Length; j++)
+                {
+                    if (arr[i] > arr[j])
+                    {
+                        sorted = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = sorted;
+                    }
+                }
+                sortArr[i] = sorted;
+            }
+            foreach (var item in arr)
+            {
+                Console.Write(item + " ");
             }
         }
     }
