@@ -101,16 +101,10 @@
         {
             Console.WriteLine("Введите ваше имя");
             string name = Console.ReadLine();
-            char[] charName = new char[name.Length];
-            char[] reverceName = new char[name.Length];
-            for (int i = 0; i < name.Length; i++)
-            {
-                charName[i] = name[i];
-            }
             Console.WriteLine("Ваше имя наоборот:");
             for (int i = name.Length - 1; i >= 0; i--)
             {
-                Console.Write(charName[i]);
+                Console.Write(name[i]);
             }
         }
     }
