@@ -7,14 +7,15 @@
             string A = "A";
             string B = "B";
             bool C = A != B;
-            Console.WriteLine(C);
-            AbXy();
-            IfElse();
+            //Console.WriteLine(C);
+            //AbXy();
+            //IfElse();
 
-            Console.WriteLine(Ternar(6, 7));
-            SwitchColor();
+            //Console.WriteLine(Ternar(6, 7));
+            //SwitchColor();
 
-            NumberSum();
+            // NumberSum();
+            ReverceName();
         }
         static void  AbXy()
         {
@@ -95,6 +96,16 @@
                 sum += number;
             }
             Console.WriteLine("Итоговая сумма " + sum);
+        }
+        static void ReverceName()
+        {
+            Console.WriteLine("Введите ваше имя");
+            string name = Console.ReadLine();
+            Console.WriteLine("Ваше имя наоборот:");
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                Console.Write(name[i]);
+            }
         }
     }
 }
