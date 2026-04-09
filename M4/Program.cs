@@ -21,7 +21,10 @@ namespace M4
             //ArraySort();
             //ArraySum();
             //ZubArray();
-            TwoArray();
+            //TwoArray();
+            TwoArraySum();
+
+
         }
         static void  AbXy()
         {
@@ -182,6 +185,38 @@ namespace M4
                 }
             }
             Console.WriteLine("Сумма всех положительных чисел двумерного массиа = " + sum);
+        }
+
+        static void TwoArraySum()
+        {
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+
+            int item = 0;
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    for (int k = j + 1; k < arr.GetLength(1); k++)
+                    {
+                        if (arr[i, j] > arr[i, k])
+                        {
+                            item = arr[i, k];
+                            arr[i, k] = arr[i, j];
+                            arr[i, j] = item;
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0;i < arr.GetLength(0); i++)
+            {
+                for (int j = 0;j < arr.GetLength(1); j++)
+                {
+                    Console.Write(arr[i, j]);
+                    
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
