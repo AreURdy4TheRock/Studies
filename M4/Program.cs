@@ -6,9 +6,9 @@ namespace M4
     {
         static void Main(string[] args)
         {
-            string A = "A";
-            string B = "B";
-            bool C = A != B;
+            //string A = "A";
+            //string B = "B";
+            //bool C = A != B;
             //Console.WriteLine(C);
             //AbXy();
             //IfElse();
@@ -22,7 +22,8 @@ namespace M4
             //ArraySum();
             //ZubArray();
             //TwoArray();
-            TwoArraySum();
+            //TwoArraySum();
+            Cortej();
 
 
         }
@@ -218,5 +219,21 @@ namespace M4
                 Console.WriteLine();
             }
         }
+
+        static void Cortej()
+        {
+            (string name, int age) anketa;
+
+            Console.WriteLine("Введите Ваше имя");
+            anketa.name = Console.ReadLine();
+            Console.WriteLine("Введите ваш возраст");
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ваше имя {0}", anketa.name);
+            Console.WriteLine("Вам {0} лет", anketa.age);
+            Console.ReadKey();
+
+        }
+
     }
 }
