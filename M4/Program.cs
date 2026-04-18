@@ -23,7 +23,8 @@ namespace M4
             //ZubArray();
             //TwoArray();
             //TwoArraySum();
-            Cortej();
+            //Cortej();
+            CortejPet();
 
 
         }
@@ -233,6 +234,20 @@ namespace M4
             Console.WriteLine("Вам {0} лет", anketa.age);
             Console.ReadKey();
 
+        }
+
+        static void CortejPet()
+        {
+            (string name, string type, double age, int nameCount) Pet;
+            Console.WriteLine("Введите имя вашего питомца");
+            Pet.name = Console.ReadLine();
+            Console.WriteLine("Введите тип питомца");
+            Pet.type = Console.ReadLine();
+            Console.WriteLine("Введите возраст питомца");
+            Pet.age = Convert.ToDouble(Console.ReadLine());
+            Pet.nameCount = Pet.name.Length;
+            Console.WriteLine("Вашего питомца зовут {0}. Это {1}. Ему {2} лет. Длина имени - {3}.", Pet.name, Pet.type, Pet.age, Pet.nameCount);
+            Console.ReadKey();
         }
 
     }
